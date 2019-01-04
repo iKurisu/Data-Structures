@@ -8,11 +8,8 @@ class SinglyLinkedList {
       this.head = new SinglyLinkedListNode(value);
     } else {
       let node = this.head;
-
-      while (node.next) {
-        node = node.next;
-      }
-
+      
+      while (node.next) node = node.next;
       node.next = new SinglyLinkedListNode(value);
     }
   }
@@ -25,10 +22,7 @@ class SinglyLinkedList {
     } else if (!node.next) {
       this.head = null;   
     } else {
-      while (node.next.next) {
-        node = node.next;
-      }
-
+      while (node.next.next) node = node.next;
       node.next = null;
     }
   }

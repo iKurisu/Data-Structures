@@ -1,11 +1,11 @@
-class LinkedList {
+class SinglyLinkedList {
   constructor() {
     this.head = null;
   }
 
   insert(value) {
     if (this.head === null) {
-      this.head = new LinkedListNode(value);
+      this.head = new SinglyLinkedListNode(value);
     } else {
       let node = this.head;
 
@@ -13,12 +13,12 @@ class LinkedList {
         node = node.next;
       }
 
-      node.next = new LinkedListNode(value);
+      node.next = new SinglyLinkedListNode(value);
     }
   }
 }
 
-class LinkedListNode {
+class SinglyLinkedListNode {
   constructor(data) {
     this.data = data;
     this.next = null;
